@@ -2,8 +2,8 @@
 
 // database functions ************************************************
 
-function fConnectToDatabase() {
-   $db = new PDO('mysql:host=localhost;dbname=testdb', 'username', 'password');
+function ConnectToMySQL($dsn, $usr, $pass) {
+   $db = new PDO($dsn, $usr, $pass);
    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
    return $db;

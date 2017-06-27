@@ -1,6 +1,6 @@
 <?php
 
-interface PersistenceInterface {
+interface StorageInterface {
     public function Count();
     public function Create($item);
     public function Read($id);
